@@ -79,53 +79,9 @@ The homicide rate across the Dutch provinces varies. The highest homicide rate (
 On the city-level, the most homicides are registered in Amsterdam, followed by Rotterdam, the Hague and Utrecht.
 
 """)
-    regions_data = pd.DataFrame({
-    'Region': ['Groningen', 'Friesland', 'Drenthe', 'Overijssel', 'Flevoland', 'Zeeland', 'North Holland', 'South Holland', 'Utrecht', 'Gelderland', 'North Brabant', 'Limburg'],
-    'Homicide Rate': [0.48, 0.62, 0.53, 0.53, 0.75, 0.71, 0.94, 0.78, 0.62, 0.45, 0.78, 0.82]
-})
+    
+    st.image("WebApp/Visuals/NL_map_homrates.png")
 
-# Data for cities
-    cities_data = pd.DataFrame({
-    'City': ['Amsterdam', 'Rotterdam', 'The Hague', 'Utrecht'],
-    'Latitude': [52.3676, 51.9225, 52.0705, 52.0907],
-    'Longitude': [4.9041, 4.4792, 4.3007, 5.1214],
-    'Homicide Rate': [1.99, 1.8, 1.2, 0.94]
-})
-
-    geojson_path = 'WebApp/Visuals/netherlands_.geojson'
-    gdf = gpd.read_file(geojson_path)
-
-    regions_data['Region'] = regions_data['Region'].astype(str)
-    gdf['name'] = gdf['name'].astype(str)
-
-    gdf = gdf.merge(regions_data, left_on='name', right_on='Region')
-
-    m = folium.Map(location=[52.1326, 5.2913], zoom_start=7)
-
-    Choropleth(
-        geo_data=gdf,
-        data=gdf,
-        columns=['Region', 'Homicide Rate'],
-        key_on='features.properties.prov_name',
-        fill_color='YlOrRd',
-        fill_opacity=1.0,
-        line_opacity=0.2,
-        legend_name='Homicide Rate per Region'
-    ).add_to(m)
-
-    # Add CircleMarkers for the cities with size based on homicide rate
-    for _, row in cities_data.iterrows():
-        CircleMarker(
-            location=[row['Latitude'], row['Longitude']],
-            radius=row['Homicide Rate'] * 2,  # Adjust size multiplier as needed
-            popup=f"{row['City']}: {row['Homicide Rate']}",
-            color='blue',
-            fill=True,
-            fill_color='blue'
-        ).add_to(m)
-
-    # Display the map in Streamlit
-    folium_static(m)
     st.write("Cite as: Dutch Homicide Monitor (2024)")
 
     st.write("""
