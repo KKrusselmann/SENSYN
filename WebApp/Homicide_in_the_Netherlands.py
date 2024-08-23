@@ -92,13 +92,13 @@ On the city-level, the most homicides are registered in Amsterdam, followed by R
     'Homicide Rate': [1.99, 1.8, 1.2, 0.94]
 })
 
-    geojson_path = 'WebApp/netherlands.geojson'
+    geojson_path = 'WebApp/Visuals/netherlands_.geojson'
     gdf = gpd.read_file(geojson_path)
 
     regions_data['Region'] = regions_data['Region'].astype(str)
-    gdf['prov_name'] = gdf['prov_name'].astype(str)
+    gdf['name'] = gdf['name'].astype(str)
 
-    gdf = gdf.merge(regions_data, left_on='prov_name', right_on='Region')
+    gdf = gdf.merge(regions_data, left_on='name', right_on='Region')
 
     m = folium.Map(location=[52.1326, 5.2913], zoom_start=7)
 
