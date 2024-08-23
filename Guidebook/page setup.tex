@@ -1,0 +1,94 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document Setup
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+\usepackage{geometry}                		
+\geometry{a4paper}     
+\usepackage{url}             
+\usepackage{graphicx}
+\usepackage{parskip}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage[
+backend=biber,
+style=numeric-comp,
+sorting=none
+]{biblatex}
+\addbibresource{SENSYN_bib.bib}
+\usepackage[
+colorlinks=true,
+citecolor=black,
+linkcolor=black,
+filecolor=magenta,
+urlcolor=blue]{hyperref}
+\usepackage{soul}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{setspace}
+\usepackage[osf]{newtxtext}
+\usepackage{background}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{subfigure}
+\usepackage{booktabs}
+\usepackage{orcidlink}
+\usepackage{titlesec}
+\usepackage{array}
+
+% Set line spacing
+\onehalfspacing
+
+% Set space between paragraphs
+\setlength{\parskip}{1em}
+
+% Banner bottom
+\backgroundsetup{
+  scale=1,
+  color=black,
+  opacity=0.7, 
+  angle=0,
+  position=current page.south,
+  vshift=20pt, 
+  hshift=0pt,
+  contents={\includegraphics[width=\paperwidth]{Images/banner.png}}
+}
+
+
+% page numbers 
+\fancypagestyle{plain}{
+    \fancyhf{} % Clear all header and footer fields
+
+    % Page number positioning
+    \fancyfoot[LE]{\thepage} % Left side on even pages
+    \fancyfoot[RO]{\thepage} % Right side on odd pages
+    
+
+
+    % Adjust the vertical positioning
+    \renewcommand{\headrulewidth}{0pt} % Remove header line
+    \renewcommand{\footrulewidth}{0pt} % Remove footer line
+    \setlength{\footskip}{40pt} % Adjust as needed to avoid overlap with banner
+}
+
+%Settings for python code in document 
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\footnotesize,  % Style for the code text
+    keywordstyle=\color{blue},          % Style for Python keywords
+    stringstyle=\color{green},          % Style for strings
+    commentstyle=\color{gray},          % Style for comments
+    showspaces=false,                   % Show spaces as underscores (usually false)
+    showstringspaces=false,             % Don't show spaces in strings
+    numberstyle=\tiny\color{gray},      % Style for line numbers
+    numbersep=5pt,                      % Space between line numbers and code
+    tabsize=4,                          % Tab size
+    breaklines=true,                    % Automatic line breaking
+    breakatwhitespace=false,            % Automatic line breaking only at whitespace
+    frame=single,                       % Add a frame around the code
+    captionpos=b,                       % Caption position
+    numbers=left,                       % Line numbers on the left
+    xleftmargin=2em,                    % Left margin
+    framexleftmargin=1.5em              % Margin inside the frame
+}

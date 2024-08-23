@@ -1,0 +1,127 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% SENSYN: Handguides
+% Authors: Katharina Krüsselmann, Marcel Haas, Jim Achterberg, Marco Spruit, Marieke Liem
+% Created: March 2024
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document Class
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt, twoside]{book}   
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document Setup
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+\input{page setup}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document Info
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Project SENSYN}
+\author{Katharina Krüsselmann, Marcel Haas, Jim Achterberg, Marco Spruit, Marieke Liem}
+\date{25 March 2024}	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Main Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+					
+\begin{document}
+\pagestyle{plain}
+\raggedbottom
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Front Matter
+
+\begin{titlepage}
+    \thispagestyle{empty}
+    \centering
+    \vspace*{\fill}
+    \Huge{Making Sensitive Data Open and Fair Through Synthetic Data Generation}\\
+    \vspace{0.5cm}
+    \Large{A guidebook}\\
+   
+    \vspace*{\fill}
+    
+    \begin{tikzpicture}[remember picture, overlay]
+        \node at (current page.south) [anchor=south, inner sep=0] {
+            \includegraphics[width=\paperwidth, height=0.4\paperheight]{Images/cover.png}
+        };
+    \end{tikzpicture}
+    
+    \vspace*{\fill}
+\end{titlepage}
+
+\newpage
+\thispagestyle{empty} % No headers or footers on this page
+
+This guidebook is the final result of \href{https://www.nwo.nl/en/projects/osf231006}{Project SENSYN}, which is funded by the NWO Open Science Fund (Grant number OSF23.1.006). \\
+
+\textbf{Authors} \\\\
+Katharina Krüsselmann \orcidlink{0000-0001-6181-425X} \\
+Institute of Security and Global Affairs, Leiden University \\
+
+Jim Achterberg \orcidlink{0009-0000-9589-7831}  \\
+Health Campus The Hague, Leiden University Medical Center \\
+
+Dr. Marcel Haas \orcidlink{0000-0003-2581-8370} \\
+Health Campus The Hague, Leiden University Medical Center \\
+
+Prof.dr. Marco Spruit \orcidlink{0000-0002-9237-221X} \\
+Institute of Advanced Computer Science, Leiden University \\
+Public Health \& Primary Care, Leiden University Medical Center \\
+
+Prof.dr. Marieke Liem \orcidlink{0000-0002-2653-4356} \\
+Institute of Security and Global Affairs, Leiden University \\
+
+August 2024
+
+DOI: \hl{add}
+\vspace*{\fill}
+
+\newpage
+\tableofcontents
+    \thispagestyle{empty}
+
+\cleardoublepage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapters
+
+\chapter{Introduction: The promise of synthetic data for open science}
+\input{Chapters/introduction}
+
+\chapter{Synthetic data: an introduction}
+\input{Chapters/syntheticdata}
+
+\chapter{Synthesizing data - the process}
+\input{Chapters/datasynthesis}
+
+\chapter{Privacy and utility of synthetic data}
+\input{Chapters/dataevaluation}
+
+\chapter{Proof-of-concept: synthetic Dutch homicide data}
+\input{Chapters/proofofconcept}
+
+\chapter{Conclusion: Enhancing Open Science Practices through Synthetic Data}
+\input{Chapters/conclusion}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Appendix
+
+\chapter{Appendix: Resources}
+\input{Chapters/resources}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliography
+\printbibliography
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END MAIN DOCUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}  
