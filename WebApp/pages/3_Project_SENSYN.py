@@ -60,22 +60,22 @@ with tab3:
              ***
              """)
     st.write("""
-             #### Marcel Haas \n 
+             #### [Marcel Haas](https://www.lumc.nl/afdelingen/public-health-en-eerstelijnsgeneeskunde/mr-haas/) \n 
              Marcel Haas is assistent professor of data science in population health at the Leiden University Medical Centre. 
              ***
              """)
     st.write("""
-             #### Katharina Krüsselmann \n 
+             #### [Katharina Krüsselmann](https://www.universiteitleiden.nl/en/staffmembers/katharina-krusselmann#tab-1) \n 
              Katharina Krüsselmann is researcher at the Institute of Security and Global Affairs at Leiden University, where she researches firearm violence and open science.
              ***
              """)
     st.write("""
-             #### Marieke Liem \n 
-             Marieke Liem is professor of violence and violence interventions at the Institute of Security and Global Affairs at Leiden University and experienced homicide researcher. 
+             #### [Marieke Liem](https://www.universiteitleiden.nl/en/staffmembers/marieke-liem#tab-1) \n 
+             Marieke Liem is professor of security and interventions at the Institute of Security and Global Affairs at Leiden University and experienced homicide researcher. 
              ***
              """)
     st.write("""
-             #### Marco Spruit 
+             #### [Marco Spruit](https://www.universiteitleiden.nl/en/staffmembers/marco-spruit#tab-1) 
              Marco Spruit is professor of advanced data science in population health and is connected both to the Leiden University Medical Center, as well as the Leiden Institute of Advanced Computer Science.
              ***
              """)
