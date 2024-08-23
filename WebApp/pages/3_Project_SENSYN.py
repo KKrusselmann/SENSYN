@@ -56,16 +56,28 @@ with tab2:
 with tab3:
     st.write("""
              #### Jim Achterberg \n Jim Achterberg is PhD candidate at the Leiden University Medical Center. His PhD research is on machine learning, specifically synthetic data in the field of healthcare. 
-             ***""")
-    st.write("""#### Marcel Haas \n 
-             Marcel Haas is assistent professor of data science in population health at the Leiden University Medical Centre. ***""")
-    st.write("""#### Katharina Krüsselmann \n 
-             Katharina Krüsselmann is researcher at the Institute of Security and Global Affairs at Leiden University, where she researches firearm violence and open science.***""")
-    st.write("""#### Marieke Liem \n 
-             Marieke Liem is professor of violence and violence interventions at the Institute of Security and Global Affairs at Leiden University and experienced homicide researcher. ***""")
-    st.write("""#### Marco Spruit 
-             Marco Spruit is professor of advanced data science in population health and is connected both to the Leiden University Medical Center, as well as the Leiden Institute of Advanced Computer Science. \n ***""")
-    
+             ***
+             """)
+    st.write("""
+             #### Marcel Haas \n 
+             Marcel Haas is assistent professor of data science in population health at the Leiden University Medical Centre. 
+             ***
+             """)
+    st.write("""
+             #### Katharina Krüsselmann \n 
+             Katharina Krüsselmann is researcher at the Institute of Security and Global Affairs at Leiden University, where she researches firearm violence and open science.
+             ***
+             """)
+    st.write("""
+             #### Marieke Liem \n 
+             Marieke Liem is professor of violence and violence interventions at the Institute of Security and Global Affairs at Leiden University and experienced homicide researcher. 
+             ***
+             """)
+    st.write("""
+             #### Marco Spruit 
+             Marco Spruit is professor of advanced data science in population health and is connected both to the Leiden University Medical Center, as well as the Leiden Institute of Advanced Computer Science.
+             ***
+             """)
 with tab4:
     st.write("""
     #### Contact us by mail
