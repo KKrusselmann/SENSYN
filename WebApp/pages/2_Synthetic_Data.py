@@ -2,8 +2,6 @@ import streamlit as st
 from streamlit_extras.app_logo import add_logo
 from streamlit_extras.bottom_container import bottom
 from streamlit_extras.app_logo import add_logo
-import base64
-from streamlit_pdf_viewer import pdf_viewer
 
 
 ###### PROJECT SENSYN STREAMLIT #####
