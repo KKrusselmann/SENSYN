@@ -80,7 +80,7 @@ On the city-level, the most homicides are registered in Amsterdam, followed by R
 
 """)
     
-    st.image("WebApp/Visuals/NL_map_homrates.png")
+    st.image("WebApp/Visuals/NL_map_homrates.png", width=400)
 
     st.write("Cite as: Dutch Homicide Monitor (2024)")
 
