@@ -55,7 +55,7 @@ with tab2:
 
 with tab3:
     st.write("""
-             #### Jim Achterberg \n Jim Achterberg is PhD candidate at the Leiden University Medical Center. His PhD research is on machine learning, specifically synthetic data in the field of healthcare. 
+             #### Jim Achterberg \n Jim Achterberg is PhD candidate at the Leiden University Medical Center. His PhD research is on machine learning, specifically synthetic data in the field of healthcare.
              ***
              """)
     st.write("""
