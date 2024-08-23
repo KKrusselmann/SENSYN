@@ -8,7 +8,7 @@
 \f0\fs24 \cf0 streamlit\
 pandas\
 numpy\
-plotly.express\
+plotly_express\
 folium\
 streamlit_folium\
 geopandas\
