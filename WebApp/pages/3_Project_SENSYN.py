@@ -45,7 +45,7 @@ with tab1:
     st.write("""
              #### Financing \n 
              
-             This project and all of its outputs have been funded by the NWO Open Science Fund.
+             This project and all of its outputs have been funded by the NWO Open Science Fund (OSF23.1.006).
              ***""")
     
 with tab2:
@@ -54,11 +54,17 @@ with tab2:
     st.write("#### Webinar recording: Synthetic Data Application")
 
 with tab3:
-    st.write("#### Jim Achterberg \n ***")
-    st.write("#### Marcel Haas \n ***")
-    st.write("#### Katharina Krüsselmann \n ***")
-    st.write("#### Marieke Liem \n ***")
-    st.write("#### Marco Spruit \n ***")
+    st.write("""
+             #### Jim Achterberg \n Jim Achterberg is PhD candidate at the Leiden University Medical Center. His PhD research is on machine learning, specifically synthetic data in the field of healthcare. 
+             ***""")
+    st.write("""#### Marcel Haas \n 
+             Marcel Haas is assistent professor of data science in population health at the Leiden University Medical Centre. ***""")
+    st.write("""#### Katharina Krüsselmann \n 
+             Katharina Krüsselmann is researcher at the Institute of Security and Global Affairs at Leiden University, where she researches firearm violence and open science.***""")
+    st.write("""#### Marieke Liem \n 
+             Marieke Liem is professor of violence and violence interventions at the Institute of Security and Global Affairs at Leiden University and experienced homicide researcher. ***""")
+    st.write("""#### Marco Spruit 
+             Marco Spruit is professor of advanced data science in population health and is connected both to the Leiden University Medical Center, as well as the Leiden Institute of Advanced Computer Science. \n ***""")
     
 with tab4:
     st.write("""
@@ -68,4 +74,4 @@ with tab4:
     st.markdown("📧 [m.c.a.liem@fgga.leidenuniv.nl](mailto:m.c.a.liem@fgga.leidenuniv.nl)")
              
     st.write("For questions related to synthetic data, please contact Marcel Haas")
-    st.markdown("📧 [example@example.com](mailto:example@example.com)")
+    st.markdown("📧 [m.r.haas@lumc.nl](mailto:m.r.haas@lumc.nl)")
