@@ -96,12 +96,10 @@ st.write("""
 #### How synthetic data can be applied in criminology and healthcare        
 """)
 
-col3,col4 =st.columns(2)
-
-with col3:
-    health_video = open('WebApp/Visuals/Video_SENSYN_SDinHealthcare.mp4', 'rb')
-    video_health = health_video.read()
-    st.video(video_health)
+st.write("Synthetic data application in healthcare")
+health_video = open('WebApp/Visuals/Video_SENSYN_SDinHealthcare.mp4', 'rb')
+video_health = health_video.read()
+st.video(video_health)
 
 
 st.write("""

@@ -49,8 +49,11 @@ with tab1:
              ***""")
     
 with tab2:
-    st.write("#### Guidebook \n ***")
-    st.write("The guidebook can be found, read and downloaded on the [Zenodo repository](https://zenodo.org/records/13374278)")
+    st.write("""
+             #### Guidebook \n 
+             The guidebook can be found, read and downloaded on the [Zenodo repository](https://zenodo.org/records/13374278)
+             ***
+             """)
 
     st.write("#### Webinar recording: Synthetic Data Application")
     st.video("WebApp/Visuals/Video_SENSYN_SDinHealthcare.mp4")
