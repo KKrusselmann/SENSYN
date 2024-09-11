@@ -12,42 +12,25 @@ from streamlit_extras.app_logo import add_logo
 from streamlit_extras.bottom_container import bottom
 
 
-###### REAL DATA #####
-
-DHM_r = pd.read_csv('WebApp/Data/Hom_Rates.csv', encoding='utf-8', sep=';')
-DHM_r = pd.DataFrame(DHM_r)
-DHM_r.rename(columns={'Hom_Rate':'Homicide Rate','M_Hom_Rate':'Male Homicide Rate', 'F_Hom_Rate':'Female Homicide Rate'}, inplace=True)
-DHM_r.rename(columns={'IPH_Rate':'IPH Rate','Dom_Rate':'Domestic Homicide Rate', 'Crim_Rate':'Criminal Homicide Rate', 'Rob_Rate':'Robbery Homicide Rate', 'Disp_Rate':'Dispute Homicide Rate', 'Oth_Rate':'Other Homicide Rate'}, inplace=True)
-DHM_r.columns.values[0]='Year'
-
-DHM_r['Homicide Rate']=DHM_r['Homicide Rate'].str.replace(',','.').astype(float)
-DHM_r['Male Homicide Rate']=DHM_r['Male Homicide Rate'].str.replace(',','.').astype(float)
-DHM_r['Female Homicide Rate']=DHM_r['Female Homicide Rate'].str.replace(',','.').astype(float)
-DHM_r['IPH Rate']=DHM_r['IPH Rate'].str.replace(',','.').astype(float)
-DHM_r['Domestic Homicide Rate']=DHM_r['Domestic Homicide Rate'].str.replace(',','.').astype(float)
-DHM_r['Criminal Homicide Rate']=DHM_r['Criminal Homicide Rate'].str.replace(',','.').astype(float)
-DHM_r['Robbery Homicide Rate']=DHM_r['Robbery Homicide Rate'].str.replace(',','.').astype(float)
-DHM_r['Dispute Homicide Rate']=DHM_r['Dispute Homicide Rate'].str.replace(',','.').astype(float)
-DHM_r['Other Homicide Rate']=DHM_r['Other Homicide Rate'].str.replace(',','.').astype(float)
-
 
 ###### STREAMLIT HOMICIDE IN THE NETHERLANDS #####
 
 def add_logo_sidebar(image_path, image_width):
     st.sidebar.image(image_path, width=image_width)
 
-st.set_page_config(page_title="Homicide in the Netherlands",
+st.set_page_config(page_title="Synthetic data on homicide in the Netherlands",
                    page_icon=":knife:",
                    layout="wide")
 
 add_logo_sidebar('WebApp/Visuals/logo.png', 150)  # Adjust path and width as needed
 add_logo_sidebar('WebApp/Visuals/lumc_logo.png', 150)  # Adjust path and width as needed
 
+
 st.write("""
-# Homicide in the Netherlands
+# Synthetic data on homicide in the Netherlands
 ***
          
-This page is meant as an informational hub on homicide in the Netherlands.\n
+This page is meant as an informational hub on synthetic data on homicide in the Netherlands.\n
 The information on this page is based on the Dutch Homicide Monitor, which is administered by criminologists at Leiden University.
 Due to personal information in the Dutch Homicide Monitor, it is not possible to display details about each homicide case, nor to display all information gathered in the Dutch Homicide Monitor.
 If you want to explore detailed homicide data yourself, please have a look at the page **Explore Homicide Data**, which uses a synthetic dataset based on the Dutch Homicide Monitor.
@@ -58,116 +41,10 @@ Questions about homicides in the Netherlands or the project that are not answere
 ***
 """)
 
-tab1, tab2, tab3 = st.tabs(["Some Statistics","Dutch Homicide Monitor","Research"])
+tab1, tab2 = st.tabs(["Dutch Homicide Monitor","Research"])
+
 
 with tab1:
-    st.write("""
- #### Prevalence of Homicide
-
-The homicide rate in the Netherlands has been **declining** steadily since the beginning of the century.\n
-In the last five years, on average 110 homicides took place each year, which accounts for **0.6 homicides per 100.000 population**. 
-Compared to the global and European average, the Dutch homicide rate is relatively low.       
-""")
-    fig_hr = px.line(DHM_r, x='Year', y='Homicide Rate', title='Homicide Rate (2001-2020)')
-    st.plotly_chart(fig_hr, use_container_width=True)
-    st.write("Cite as: Dutch Homicide Monitor (2024)")
-    st.write("***")
-    st.write("""
-#### Homicide throughout the country
-
-The homicide rate across the Dutch provinces varies. The highest homicide rate (2011-2020) is measured in North Holland (0.94 per 100.000 population; the lowest in Gelderland (0.48 per 100.000 population.\n
-On the city-level, the most homicides are registered in Amsterdam, followed by Rotterdam, the Hague and Utrecht.
-
-""")
-    
-    st.image("WebApp/Visuals/NL_map_homrates.png", width=600)
-
-    st.write("Cite as: Dutch Homicide Monitor (2024)")
-
-    st.write("""
-    ***
-    #### Homicide Types
-            
-    Most homicides in the Netherlands (2011-2020) occurred in the context of a conflict between (ex) intimate partners or in the context of criminal activities, such as assassinations or fatal rip deals.\n
-    Relatively rare are homicides committed during robberies, the killing of children, homicides committed by individuals with a mental health crisis or homicides in the context of nightlife violence.
-
-    """)
-
-    # Data for the pie chart
-    data = {
-        'Category': [
-            'Partner killing', 'Criminal Milieu', 'Missing', 'Other non-criminal',
-            'Other', 'Other familial killing', 'Robbery killing',
-            'Child killing (family and non-family)', 'Nightlife violence',
-            'Killing by mentally disturbed person (non-family)'
-        ],
-        'Percentage': [
-            22.1, 19.5, 12.5, 16.5, 5.3, 6.9, 5.2, 5.3, 2.3, 4.3
-        ]
-    }
-
-    # Custom color sequence
-    color_discrete_map = {
-        'Missing': 'red',
-        'Partner killing': '#636EFA',  # default Plotly color
-        'Criminal Milieu': '#EF553B',  # default Plotly color
-        'Other non-criminal': '#00CC96',  # default Plotly color
-        'Other': '#AB63FA',  # default Plotly color
-        'Other familial killing': '#19D3F3',  # default Plotly color
-        'Robbery killing': '#FFA15A',  # default Plotly color
-        'Child killing (family and non-family)': '#FF6692',  # default Plotly color
-        'Nightlife violence': '#B6E880',  # default Plotly color
-        'Killing by mentally disturbed person (non-family)': '#FF97FF'  # default Plotly color
-    }
-    # Create a pie chart using Plotly
-    fig = px.pie(data, names='Category', values='Percentage', color='Category', color_discrete_map=color_discrete_map)
-
-    col1, col2 = st.columns([2, 1])
-
-    # Place the pie chart in the left column
-    with col1:
-        st.plotly_chart(fig)
-
-    st.write("Cite as: Dutch Homicide Monitor (2024)")
-    st.write("""
-    ***
-    #### Gender of homicide victims and perpetrators
-            
-    About two-thirds of homicides victims in the Netherlands are male, as are more than 80 percent of the offenders.
-            
-    """)
-
-    data1 = {
-        'Category': ['Male', 'Female', 'Missing'],
-        'Percentage': [65.7, 33.4, 0.1]
-    }
-
-    data2 ={
-        'Category': ['Male','Female','Missing'],
-        'Percentage': [84.1,6.7,9.2 ]
-    }
-
-    color_discrete_map = {
-        'Missing': 'red',
-        'Male': '#636EFA',  # default Plotly color
-        'Female': '#EF553B'  # default Plotly color
-    }
-
-    fig_vic = px.pie(data1, names='Category', values='Percentage', color='Category', title='Gender of homicide victims', color_discrete_map=color_discrete_map)
-    fig_perp = px.pie(data2, names='Category', values='Percentage', color='Category', title='Gender of main homicide perpetrator', color_discrete_map=color_discrete_map)
-
-    col1, col2 =st.columns([2,1])
-
-    with col1:
-        st.plotly_chart(fig_vic)
-
-    with col2:
-        st.plotly_chart(fig_perp)
-
-    st.write("Cite as: Dutch Homicide Monitor (2024)")
-
-
-with tab2:
     st.write(
         """
 The Dutch Homicide Monitor is a dataset that entails detailed information on homicides occuring in the Netherlands since 1992.
@@ -214,7 +91,7 @@ Combined, these sources provide the most complete and detailed picture of homici
 
 """)
 
-with tab3:
+with tab2:
     st.write("""
 This page is a collection of academic research on homicide in the Netherlands.
              
