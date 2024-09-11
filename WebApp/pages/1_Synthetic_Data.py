@@ -111,9 +111,10 @@ st.write("""
 Our guidebook provides a more comprehensive description of what synthetic data is, how it is generated, its advantages and risks, as well as the process of how we generated realistic synthetic homicide data.
 """)
 
-# URL of the PDF file
-pdf_url = "https://zenodo.org/records/13374278"
-
 # Embed the PDF using an iframe
-st.components.v1.html(f'<iframe src="{pdf_url}" width="700" height="1000" type="application/pdf"></iframe>', height=1000)
-
+st.components.v1.html(
+    """
+    <iframe src="https://zenodo.org/records/13374278" width="100%" height="600" frameborder="0"></iframe>
+    """,
+    height=600
+)
