@@ -112,7 +112,7 @@ Our guidebook provides a more comprehensive description of what synthetic data i
 """)
 
 # URL of the PDF file
-pdf_url = "https://www.universiteitleiden.nl/binaries/content/assets/governance-and-global-affairs/isga/ehm_coding-manual_nucleus-variables_final.pdf"
+pdf_url = "https://zenodo.org/records/13374278"
 
 # Embed the PDF using an iframe
 st.components.v1.html(f'<iframe src="{pdf_url}" width="700" height="1000" type="application/pdf"></iframe>', height=1000)
