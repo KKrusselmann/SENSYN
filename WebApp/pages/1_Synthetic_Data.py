@@ -99,7 +99,7 @@ st.write("""
 col3,col4 =st.columns(2)
 
 with col3:
-    health_video = open('Video_SENSYN_SDinHealthcare - Trim.mp4', 'rb')
+    health_video = open('Video_SENSYN_SDinHealthcare.mp4', 'rb')
     video_health = health_video.read()
     st.video(video_health)
 
