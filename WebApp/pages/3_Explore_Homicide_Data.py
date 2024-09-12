@@ -314,6 +314,8 @@ with tab2:
     filtered_DHM.rename(columns=label_map, inplace=True)
     st.write(filtered_DHM)
 
+    st.wite("When downloading and reusing the data, please reference the dataset as Krüsselmann, K., Achterberg, J., Haas, M., Spruit, M. & Liem, M. (2024). Synthetic Dutch Homicide Monitor [Data set]. Leiden University/Leiden University Medical Center. (https://doi.org/10.5281/zenodo.13378063)")
+
     with tab3:
         st.write("""
 This page is a collection of academic research on homicide in the Netherlands.
