@@ -41,12 +41,11 @@ st.write("""
 # Explore Homicide Data
 ***
 
-On this page, you can explore various aspects of homicide in the Netherlands youself.
-Due to privacy regulations, the data displayed on this page does not refer to real homicide cases, but is based on synthetic data (see tab "Synthetic Data" for more information).
-As a result, slight disparities with official statistics might occur.
+On this page, we showcase the functionality of synthetic data by presenting a synthetic dataset on homicide in the Netherlands.
+This dataset is based on the Dutch Homicide Monitor, a detailed dataset on homicides administered by researchers at Leiden University. Read on to find more information on the Dutch Homicide Monitor.
+Open-access research related to the Dutch Homicide Monitor and other research on homicide in the Netherlands can found under the tab "Research on Homicide".
 
-To learn more about the data, continue reading. 
-To explore the data, click on the tab "Data Explorer"
+To explore the synthetic homicide data, click on the tab "Data Explorer"
 
 How to explore the data: 
 1. Select any filter you want to apply (or none)
