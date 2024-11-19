@@ -69,9 +69,7 @@ with tab1:
         """)
     
     st.write("#### The Dutch Homicide Monitor")
-    dhmvid= open('WebApp/Visuals/SENSYN_DHM_2.mp4', 'rb')
-    DHMvid = dhmvid.read()
-    st.video(DHMvid)
+    st.video("https://www.youtube.com/watch?v=VX2rFOV5aRU")
 
     st.write("""
 

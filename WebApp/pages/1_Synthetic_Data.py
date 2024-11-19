@@ -31,15 +31,11 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.write("#### What is synthetic data?")
-    syntheticvid= open('WebApp/Visuals/syntheticdata.mp4', 'rb')
-    synthvid = syntheticvid.read()
-    st.video(synthvid)
+    st.video('https://www.youtube.com/watch?v=HgRLLlOOUzI')
 
 with col2:
     st.write("#### How is synthetic data generated?")
-    synthesisvid=open('WebApp/Visuals/datasynthesis.mp4','rb')
-    synthesisvide=synthesisvid.read()
-    st.video(synthesisvid)
+    st.video('https://www.youtube.com/watch?v=b_MdbRb0YEI')
 
 
 st.write("""
@@ -71,8 +67,10 @@ In the *industry*, synthetic data can be a key driver of new innovations. It can
 For *researchers*, synthetic data opens new avenues for conducting research. It allows the study of rare phenomena, the validation of models or simulation of experiments. In addition, when using synthetic data,
 researchers can share data with peers globally, enhancing open science practices and accelerating scientific research.
 
-
+See the following webinar about the application of synthetic data in healthcare
 """)
+
+st.video("WebApp/Visuals/Video_SENSYN_SDinHealthcare.mp4")
 
 st.write("""
 ***
