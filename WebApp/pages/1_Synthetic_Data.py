@@ -70,7 +70,7 @@ researchers can share data with peers globally, enhancing open science practices
 See the following webinar about the application of synthetic data in healthcare
 """)
 
-st.video("WebApp/Visuals/Video_SENSYN_SDinHealthcare.mp4")
+st.video("https://www.youtube.com/watch?v=Qbrj-Gz3nds")
 
 st.write("""
 ***
