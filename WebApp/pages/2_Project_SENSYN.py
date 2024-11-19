@@ -55,8 +55,6 @@ with tab2:
              ***
              """)
 
-    st.write("#### Webinar recording: Synthetic Data Application")
-    st.video("WebApp/Visuals/Video_SENSYN_SDinHealthcare.mp4")
 
 with tab3:
     st.write("""

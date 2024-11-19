@@ -22,7 +22,7 @@ st.write("""
 This page contains all relevant information on synthetic data. What is it, how it is made, what it can be used for and the advantages and risks
 associated with synthetic data.
          
-For short explanations, have a look at the videos. More detailed explanations are found in the text, as well as in our guidebook on synthetic data.
+For short explanations, have a look at the videos. More detailed explanations are found in the text, as well as in our [guidebook on synthetic data](https://zenodo.org/records/13752141).
 
 ***
          """)
@@ -90,17 +90,6 @@ whether it resembles the original data close enough and whether the synthetic da
 
 """)
 st.image('WebApp/Visuals/syntheticdata__synthesis.png', width=700)
-
-st.write("""
- ***
-#### How synthetic data can be applied in criminology and healthcare        
-""")
-
-st.write("Synthetic data application in healthcare")
-health_video = open('WebApp/Visuals/Video_SENSYN_SDinHealthcare.mp4', 'rb')
-video_health = health_video.read()
-st.video(video_health)
-
 
 st.write("""
 ***
